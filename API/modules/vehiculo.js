@@ -8,7 +8,7 @@ const cnx = require("./bdata");
 //Consultar
 vehiculo.get("/vehiculo/listing", (req, res) => {
   let sql =
-    "SELECT*from compraventa";
+    "SELECT*FROM vehiculo";
   cnx.query(sql, (error, data) => {
     try {
       res.status(200).send(data);
@@ -50,7 +50,7 @@ vehiculo.post("/vehiculo/create", (req, res) => {
     placa: req.body.placa,
     contrato: req.body.contrato,
   };
-  cnx.query("insert into compraventa set ?", frmdata, (error, data) => {
+  cnx.query("insert into vehiculo set ?", frmdata, (error, data) => {
     try {
       res.status(200).send("Insercion exitosa!!");
     } catch (error) {
@@ -69,7 +69,7 @@ vehiculo.put("/people/update/:id", (req, res) => {
     placa: req.body.placa,
     contrato: req.body.contrato,
   };
-  cnx.query("update compraventa set? where idVehiculo=?", [frmdata, id], (error, data) => {
+  cnx.query("update vehiculo set? where idVehiculo=?", [frmdata, id], (error, data) => {
     try {
       res.status(200).send("Actualizacion exitosa!!");
     } catch (error) {
