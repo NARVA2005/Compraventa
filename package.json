@@ -1,0 +1,11 @@
+{
+  "name": "compraventa",
+  "version": "1.0.0",
+  "description": "se crea un compraventa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "narvaJuanda",
+  "license": "ISC"
+}
